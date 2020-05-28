@@ -1,0 +1,11 @@
+var maxProfit = function (prices) {
+  let money = 0;
+  let buy = prices[0];
+  for (let price of prices) {
+    if (price > buy) {
+      money += price - buy;
+    }
+    buy = price;
+  }
+  return money;
+};
